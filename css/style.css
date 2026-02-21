@@ -159,7 +159,6 @@ body {
     background-color: var(--primary-color);
     color: var(--white);
 }
-/
 .section-reservation {
     padding: 80px 0;
     background-color: var(--bg-light);
@@ -247,3 +246,4 @@ textarea {
         padding: 25px;
     }
 }
+
