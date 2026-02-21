@@ -1,0 +1,62 @@
+body { font-family: Arial, sans-serif; }
+        header {
+            background-image: url('Nav_bg.jpeg'); /* ← IMAGE LOCALE ICI – change le nom/chemin si besoin */
+            background-size: cover;
+            background-position: center;
+            height: 98vh; /* Desktop */
+            color: white;
+            text-align: center;
+            padding-top: 20vh;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8); /* Meilleure lisibilité sur image */
+        }
+        @media (max-width: 768px) {
+            header { height: 100vh; } /* Mobile */
+        }
+        .header p {
+            font-size: 1.5rem;
+            margin-top: 20px;
+        }
+        .navbar { background-color: rgba(0, 0, 0, 0.75); } /* Plus opaque pour contraster */
+        .modal-body img {
+            width: 100%;
+            height: auto;
+            max-height: 80vh; /* Pour éviter que ça dépasse sur mobile */
+            object-fit: contain; /* Garde les proportions */
+        }
+        @media (max-width: 576px) {
+            .modal-dialog { max-width: 95%; }
+        }
+        .gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.gallery-item img {
+    transition: transform 0.4s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    transform: translateY(100%);
+    transition: transform 0.4s ease;
+}
+
+.gallery-item:hover .overlay {
+    transform: translateY(0);
+}
+
+.gallery-item .text {
+    font-weight: bold;
+}

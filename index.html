@@ -3,10 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restaurant</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Restaurant La Gourmandise</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css"> <!-- Ton CSS personnalisé -->
 </head>
 <body>
-    <script src="main.js"></script>
+
+    <!-- Nav (Menu) -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">La Gourmandise</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#accueil">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#menuModal">Notre menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#offres">Offres spéciales</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#reservation">Réservation</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#galerie">Galerie</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#temoignages">Témoignages</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="header" id="accueil">
+        <h1>Restaurant La Gourmandise</h1>
+        <p>Le plaisir à chaque bouchée – Plats africains et internationaux !</p>
+        <div class="mt-4">
+            <a href="#reservation" class="btn btn-primary btn-lg">Réserver une table</a>
+            <a href="#menuModal" class="btn btn-secondary btn-lg mx-2" data-bs-toggle="modal">Voir le menu</a>
+            <a href="#contact" class="btn btn-outline-light btn-lg">Nous contacter</a>
+        </div>
+    </header>
+
+    <!-- Modal pour le menu (pop-up avec PNG) -->
+    <div class="modal fade" id="menuModal" tabindex="-1" aria-labelledby="menuModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl"> <!-- xl pour plus grand sur desktop -->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="menuModalLabel">Notre Menu</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <!-- Remplace le PDF par l'image PNG -->
+                    <img src="img/Force_n_menu_restaurant.png" alt="Menu du Restaurant Amadou Faye">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- galerie... -->
+     <!-- Section Galerie -->
+<section id="galerie" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-5">Galerie</h2>
+        <p class="text-center lead mb-5">Découvrez l'ambiance et les délices de Restaurant La Gourmandise à travers notre galerie de photos.</p>
+        <div class="row g-4">
+            <!-- Image 1 : Plat -->
+            <div class="col-6 col-md-4">
+                <div class="gallery-item">
+                    <img src="img/Img_piz.PNG" alt="Pizza Pimento" class="img-fluid rounded shadow">
+                    <div class="overlay">
+                        <div class="text">Pizza Pimento</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Image 2 : Plat -->
+            <div class="col-6 col-md-4">
+                <div class="gallery-item">
+                    <img src="img/Img_Duoble_B.PNG" alt="Double Burger" class="img-fluid rounded shadow">
+                    <div class="overlay">
+                        <div class="text">Double Burger</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Image 3 : Intérieur -->
+            <div class="col-6 col-md-4">
+                <div class="gallery-item">
+                    <img src="img/Img_Salle.PNG" alt="Intérieur du restaurant" class="img-fluid rounded shadow">
+                    <div class="overlay">
+                        <div class="text">Notre salle chaleureuse</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Image 4 : Autre plat -->
+            <div class="col-6 col-md-4">
+                <div class="gallery-item">
+                    <img src="img/Img_Yas_Poul.PNG" alt="Yassa Poulet" class="img-fluid rounded shadow">
+                    <div class="overlay">
+                        <div class="text">Yassa Poulet</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Image 5 : Équipe ou clients -->
+            <div class="col-6 col-md-4">
+                <div class="gallery-item">
+                    <img src="img/Img_Equi.PNG" alt="Notre équipe" class="img-fluid rounded shadow">
+                    <div class="overlay">
+                        <div class="text">L'équipe à votre service</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Image 6 : Clients heureux -->
+            <div class="col-6 col-md-4">
+                <div class="gallery-item">
+                    <img src="img/Img_Part.PNG" alt="Clients satisfaits" class="img-fluid rounded shadow">
+                    <div class="overlay">
+                        <div class="text">Moments de partage</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
